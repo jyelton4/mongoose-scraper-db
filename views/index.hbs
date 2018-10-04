@@ -1,0 +1,38 @@
+<div>
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">NewsScraperDB</a>
+        </div>
+    </nav>
+</div>
+
+
+{{#each article}}
+    <div class="jumbotron" data-id={{this._id}}>
+        <h4>{{this.title}}</h6>
+        <h5>{{this.summary}}</h5>
+        <h6>{{this.link}}</h6>
+        <p>
+            <button class="btn btn-primary notes-btn" data-id={{this._id}} type="button" data-toggle="collapse" data-target="#card-{{this._id}}" aria-expanded="false" aria-controls="collapseExample">
+                Notes
+            </button>
+        </p>
+        <div class="collapse" id='card-{{this._id}}'>
+            <div class="card card-body">
+                <form>
+                    <div class="form-group">
+                    <label for={{this.id}}>Leave a new note: </label>
+                    <textarea class="form-control" id={{this._id}} rows="3"></textarea>
+                </form>
+                <button class="btn btn-warning save-btn" type="button" data-id={{this._id}} id="savenote">Save</button>
+                <div>
+                    <h4>Saved Notes: </h4>
+                    {{#each note}}
+                    </p>{{this.body}}</p>
+                    <button class="btn btn-danger delete-btn" type="button" data-id={{this._id}}>x</button>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}

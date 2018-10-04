@@ -1,0 +1,35 @@
+{
+  "name": "mongoose-scraper",
+  "version": "1.0.0",
+  "description": "web scraping and storage application using MongoDB, Cheerio, and Node.js./Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyelton4/mongoose-scraper.git"
+  },
+  "author": "jacob yelton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jyelton4/mongoose-scraper/issues"
+  },
+  "homepage": "https://github.com/jyelton4/mongoose-scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "hbs": "~4.0.1",
+    "http-errors": "~1.6.2",
+    "logger": "0.0.1",
+    "mongoose": "^5.3.0",
+    "morgan": "~1.9.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
