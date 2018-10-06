@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "web scraping and storage application using MongoDB, Cheerio, and Node.js./Express",
   "main": "index.js",
+  "engines": {
+    "node": "10.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server.js"
