@@ -7,7 +7,7 @@ var cheerio = require('cheerio');
 // A GET route for scraping the echoJS website
 module.exports = function(app, db) {
     
-    app.get("/scrape", function(req, res) {
+    app.get("/", function(req, res) {
         var options = {
             uri: "https://www.npr.org/sections/news/", 
             transform: function (body) {
@@ -64,7 +64,10 @@ module.exports = function(app, db) {
             });
     
         // If we were able to successfully scrape and save an Article, send a message to the client
-        res.send("Scrape Complete");
+        
+        })
+        .then(function(resp) {
+            res.redirect("/home");
         });
     });
 };

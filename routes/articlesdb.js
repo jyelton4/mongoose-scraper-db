@@ -4,7 +4,7 @@ var router = express.Router();
 // Route for getting all Articles from the db
 module.exports = function(app, db) {
 
-    app.get("/", function(req, res) {
+    app.get("/home", function(req, res) {
         db.Article.find({})
         .populate("note")
         .then(function(dbArticles) {
@@ -72,9 +72,3 @@ module.exports = function(app, db) {
         });
     });
 };
-
-// return db.Article.find({})
-//             .populate("note")
-//             .then(function(dbArticles) {
-//                 return res.render("index", {
-//                     article: dbArticles});
